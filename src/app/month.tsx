@@ -3,7 +3,7 @@ import Image from "next/image"
 
 interface MonthProps {
 	title: string
-	content: string
+	content: React.ReactNode
 	images: string[]
 }
 

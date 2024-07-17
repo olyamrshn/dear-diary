@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function Home() {
 	return (
 		<div className="text-center text-md flex flex-col items-center justify-center">
-			<h1 className="pt-10">DIARY</h1>
+			<h1 className="pt-10">Dear Diary</h1>
 			<p className="mt-5 px-4 lg:w-2/5">
 				Over the past two years, I've been traveling extensively and have
 				decided to share various content on this website. This blog will feature
@@ -15,23 +15,17 @@ export default function Home() {
 					<span className="italic cursor-pointer">open source</span>
 				</Link>
 			</p>
-			<ul className="mt-5">
-				<li>
-					<Link href="/march">march — saint petersburg / tbilisi</Link>
-				</li>
-				<li>
-					<Link href="/april">april — tbilisi</Link>
-				</li>
-				<li>
-					<Link href="/may">may — tbilisi / istanbul</Link>
-				</li>
-				<li>
-					<Link href="/june">june — tbilisi</Link>
-				</li>
-				<li>
-					<Link href="/july">july — saint p / ? </Link>
-				</li>
-			</ul>
+			<Link href="/notes" className="mt-5">
+				NOTES
+			</Link>
+			<p className="py-3 italic opacity-60">travel thoughts and reflections</p>
+			<Link href="/spots" className="mt-5">
+				SPOTS
+			</Link>
+			<p className="py-3 italic opacity-60 max-w-xs mx-auto">
+				fav locations and hidden gems I've discovered during my journeys. <br />
+				coming soon
+			</p>
 		</div>
 	)
 }

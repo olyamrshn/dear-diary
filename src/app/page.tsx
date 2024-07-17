@@ -23,8 +23,7 @@ export default function Home() {
 				SPOTS
 			</Link>
 			<p className="py-3 italic opacity-60 max-w-xs mx-auto">
-				fav locations and hidden gems I've discovered during my journeys. <br />
-				coming soon
+				fav locations I've discovered during my journeys. <br />
 			</p>
 		</div>
 	)

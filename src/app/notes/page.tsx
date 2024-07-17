@@ -8,7 +8,7 @@ export default function Notes() {
 			</a>
 			<div className="text-center text-md flex flex-col items-center justify-center">
 				<h1 className="pt-10">NOTES</h1>
-				<ul className="mt-5">
+				<ul className="mt-5 space-y-5">
 					<li>
 						<Link href="/march">march — saint petersburg / tbilisi</Link>
 					</li>

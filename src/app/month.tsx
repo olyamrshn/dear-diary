@@ -10,7 +10,7 @@ interface MonthProps {
 const Month: React.FC<MonthProps> = ({ title, content, images }) => {
 	return (
 		<>
-			<a href="/" className="p-5 no-underline focus:outline-none">
+			<a href="/notes" className="p-5 no-underline focus:outline-none">
 				← Back
 			</a>
 			<div className="text-center">

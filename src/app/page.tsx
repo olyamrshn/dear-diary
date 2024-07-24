@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Home() {
 	return (
@@ -15,6 +16,13 @@ export default function Home() {
 					<span className="italic cursor-pointer">open source</span>
 				</Link>
 			</p>
+			<Image
+				src="https://images.omrshn.dev/sea.jpeg"
+				alt="deary cover"
+				width={600}
+				height={300}
+				className="mt-8 max-w-full h-auto"
+			/>
 			<Link href="/notes" className="mt-5">
 				NOTES
 			</Link>
@@ -23,7 +31,7 @@ export default function Home() {
 				SPOTS
 			</Link>
 			<p className="py-3 italic opacity-60 max-w-xs mx-auto">
-				fav locations I've discovered during my journeys. <br />
+				fav locations in dif cities <br />
 			</p>
 		</div>
 	)

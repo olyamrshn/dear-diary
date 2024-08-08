@@ -1,29 +1,24 @@
+import { monthData } from "@/app/data/monthData"
 import Link from "next/link"
 
 export default function Notes() {
 	return (
 		<>
-			<a href="/" className="p-5 no-underline focus:outline-none">
+			<Link
+				href="/"
+				className="ml-5 mt-5 no-underline focus:outline-none inline-block"
+			>
 				← Back
-			</a>
+			</Link>
 			<div className="text-center text-md flex flex-col items-center justify-center">
 				<h1 className="pt-10">NOTES</h1>
 				<ul className="mt-5 space-y-5">
-					<li>
-						<Link href="/march">march — saint petersburg / tbilisi</Link>
-					</li>
-					<li>
-						<Link href="/april">april — tbilisi</Link>
-					</li>
-					<li>
-						<Link href="/may">may — tbilisi / istanbul</Link>
-					</li>
-					<li>
-						<Link href="/june">june — tbilisi / istanbul (cool right) </Link>
-					</li>
-					<li>
-						<Link href="/july">july — tbilisi / saint petersburg </Link>
-					</li>
+					{monthData &&
+						Object.entries(monthData).map(([month, data]) => (
+							<li key={month}>
+								<Link href={`/notes/${month}`}>{data.title}</Link>
+							</li>
+						))}
 				</ul>
 			</div>
 		</>

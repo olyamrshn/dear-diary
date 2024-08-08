@@ -1,18 +1,30 @@
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 
 interface MonthProps {
 	title: string
 	content: React.ReactNode
 	images: string[]
+	nextMonth: string | undefined
+	nextMonthName: string | undefined
 }
 
-const Month: React.FC<MonthProps> = ({ title, content, images }) => {
+const Month: React.FC<MonthProps> = ({
+	title,
+	content,
+	images,
+	nextMonth,
+	nextMonthName,
+}) => {
 	return (
 		<>
-			<a href="/notes" className="p-5 no-underline focus:outline-none">
+			<Link
+				href="/notes"
+				className="ml-5 mt-5 no-underline focus:outline-none inline-block"
+			>
 				← Back
-			</a>
+			</Link>
 			<div className="text-center">
 				<h1>{title.toUpperCase()}</h1>
 				<p className="mt-10 px-8 text-center lg:w-2/5 mx-auto">{content}</p>
@@ -29,6 +41,18 @@ const Month: React.FC<MonthProps> = ({ title, content, images }) => {
 							</div>
 						))}
 				</div>
+				{nextMonth && nextMonthName && (
+					<div className="my-10">
+						<Link
+							href={`/notes/${nextMonth}`}
+							className="inline-flex items-center"
+						>
+							{nextMonthName.split(" ")[0]?.toUpperCase() ||
+								nextMonthName.toUpperCase()}
+							<span className="ml-2"> →</span>
+						</Link>
+					</div>
+				)}
 			</div>
 		</>
 	)

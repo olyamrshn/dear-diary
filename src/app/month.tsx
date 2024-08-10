@@ -6,6 +6,8 @@ interface MonthProps {
 	title: string
 	content: React.ReactNode
 	images: string[]
+	prevMonth: string | undefined
+	prevMonthName: string | undefined
 	nextMonth: string | undefined
 	nextMonthName: string | undefined
 }
@@ -16,6 +18,8 @@ const Month: React.FC<MonthProps> = ({
 	images,
 	nextMonth,
 	nextMonthName,
+	prevMonth,
+	prevMonthName,
 }) => {
 	return (
 		<>
@@ -35,18 +39,28 @@ const Month: React.FC<MonthProps> = ({
 							</div>
 						))}
 				</div>
-				{nextMonth && nextMonthName && (
-					<div className="my-10">
+				<div className="flex justify-center items-center space-x-20 my-10">
+					{prevMonth && prevMonthName && (
+						<Link
+							href={`/notes/${prevMonth}`}
+							className="inline-flex items-center opacity-70"
+						>
+							<span className="mr-2">←</span>
+							{prevMonthName.split(" ")[0]?.toUpperCase() ||
+								prevMonthName.toUpperCase()}
+						</Link>
+					)}
+					{nextMonth && nextMonthName && (
 						<Link
 							href={`/notes/${nextMonth}`}
 							className="inline-flex items-center"
 						>
 							{nextMonthName.split(" ")[0]?.toUpperCase() ||
 								nextMonthName.toUpperCase()}
-							<span className="ml-2"> →</span>
+							<span className="ml-2">→</span>
 						</Link>
-					</div>
-				)}
+					)}
+				</div>
 			</div>
 		</>
 	)

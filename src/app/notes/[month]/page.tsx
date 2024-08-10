@@ -1,6 +1,7 @@
 import React from "react"
 import Month from "@/app/month"
 import { monthData } from "@/app/data/monthData"
+import Back from "@/app/components/Back"
 
 export default function MonthPage({ params }: { params: { month: string } }) {
 	const monthInfo = monthData[params.month as keyof typeof monthData]
@@ -17,6 +18,15 @@ export default function MonthPage({ params }: { params: { month: string } }) {
 	}
 
 	return (
-		<Month {...monthInfo} nextMonth={nextMonth} nextMonthName={nextMonthName} />
+		<>
+			<Back />
+			<div className="pt-10">
+				<Month
+					{...monthInfo}
+					nextMonth={nextMonth}
+					nextMonthName={nextMonthName}
+				/>
+			</div>
+		</>
 	)
 }

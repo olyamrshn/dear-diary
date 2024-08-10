@@ -19,12 +19,6 @@ const Month: React.FC<MonthProps> = ({
 }) => {
 	return (
 		<>
-			<Link
-				href="/notes"
-				className="ml-5 mt-5 no-underline focus:outline-none inline-block"
-			>
-				← Back
-			</Link>
 			<div className="text-center">
 				<h1>{title.toUpperCase()}</h1>
 				<p className="mt-10 px-8 text-center lg:w-2/5 mx-auto">{content}</p>

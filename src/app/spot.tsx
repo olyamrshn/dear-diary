@@ -1,29 +1,27 @@
 import Image from "next/image"
 import Link from "next/link"
 
-interface MonthProps {
+interface SpotProps {
 	title: string
 	content: React.ReactNode
 	images: string[]
-	prevMonth: string | undefined
-	prevMonthName: string | undefined
-	nextMonth: string | undefined
-	nextMonthName: string | undefined
+	prevSpot: string | undefined
+	prevSpotName: string | undefined
+	nextSpot: string | undefined
+	nextSpotName: string | undefined
 }
 
-const Month: React.FC<MonthProps> = ({
-	title,
+const Spot: React.FC<SpotProps> = ({
 	content,
 	images,
-	nextMonth,
-	nextMonthName,
-	prevMonth,
-	prevMonthName,
+	prevSpot,
+	prevSpotName,
+	nextSpot,
+	nextSpotName,
 }) => {
 	return (
 		<>
 			<div className="text-center">
-				<h1>{title.toUpperCase()}</h1>
 				<p className="mt-10 px-8 text-center lg:w-2/5 mx-auto">{content}</p>
 				<div className="mx-auto flex flex-col sm:flex-row justify-center items-center flex-wrap mt-10 mb-10 w-11/12 sm:w-3/4 lg:w-2/5">
 					{images &&
@@ -39,23 +37,23 @@ const Month: React.FC<MonthProps> = ({
 						))}
 				</div>
 				<div className="flex justify-center items-center space-x-20 my-10">
-					{prevMonth && prevMonthName && (
+					{prevSpot && prevSpotName && (
 						<Link
-							href={`/notes/${prevMonth}`}
+							href={`/notes/${prevSpot}`}
 							className="inline-flex items-center opacity-70"
 						>
 							<span className="mr-2">←</span>
-							{prevMonthName.split(" ")[0]?.toUpperCase() ||
-								prevMonthName.toUpperCase()}
+							{prevSpotName.split(" ")[0]?.toUpperCase() ||
+								prevSpotName.toUpperCase()}
 						</Link>
 					)}
-					{nextMonth && nextMonthName && (
+					{nextSpot && nextSpotName && (
 						<Link
-							href={`/notes/${nextMonth}`}
+							href={`/notes/${nextSpot}`}
 							className="inline-flex items-center"
 						>
-							{nextMonthName.split(" ")[0]?.toUpperCase() ||
-								nextMonthName.toUpperCase()}
+							{nextSpotName.split(" ")[0]?.toUpperCase() ||
+								nextSpotName.toUpperCase()}
 							<span className="ml-2">→</span>
 						</Link>
 					)}
@@ -65,4 +63,4 @@ const Month: React.FC<MonthProps> = ({
 	)
 }
 
-export default Month
+export default Spot

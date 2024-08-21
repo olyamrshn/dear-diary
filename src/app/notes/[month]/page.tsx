@@ -1,4 +1,3 @@
-import React from "react"
 import Month from "@/app/month"
 import { monthData } from "@/app/data/monthData"
 import Back from "@/app/components/Back"

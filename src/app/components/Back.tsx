@@ -8,6 +8,9 @@ export default function Back() {
 	let href = "/"
 	if (pathname.startsWith("/notes/")) {
 		href = "/notes"
+	}
+	if (pathname.startsWith("/spots/")) {
+		href = "/spots"
 	} else if (pathname === "/notes" || pathname === "/spots") {
 		href = "/"
 	}

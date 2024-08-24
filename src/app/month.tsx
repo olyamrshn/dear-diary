@@ -39,17 +39,17 @@ const Month: React.FC<MonthProps> = ({
 						))}
 				</div>
 				<div className="flex justify-center items-center space-x-20 my-10">
-					{prevMonth && prevMonthName && (
+					{prevMonth && prevMonthName ? (
 						<Link
 							href={`/notes/${prevMonth}`}
-							className="inline-flex items-center opacity-70"
+							className="inline-flex items-center"
 						>
 							<span className="mr-2">←</span>
 							{prevMonthName.split(" ")[0]?.toUpperCase() ||
 								prevMonthName.toUpperCase()}
 						</Link>
-					)}
-					{nextMonth && nextMonthName && (
+					) : null}
+					{nextMonth && nextMonthName ? (
 						<Link
 							href={`/notes/${nextMonth}`}
 							className="inline-flex items-center"
@@ -58,7 +58,7 @@ const Month: React.FC<MonthProps> = ({
 								nextMonthName.toUpperCase()}
 							<span className="ml-2">→</span>
 						</Link>
-					)}
+					) : null}
 				</div>
 			</div>
 		</>

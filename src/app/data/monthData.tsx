@@ -62,11 +62,39 @@ export const monthData = {
 		],
 	},
 	august: {
-		title: "august - saint petersburg / moscow / kazan",
-		content: "in progress",
-		images: [],
+		title: "august - saint p / moscow / kazan",
+		content: (
+			<>
+				feel exhausted from this period. don't think i have ever changed cities
+				so frequently - Petersburg, Moscow, train to Kaluga for Signal fest,
+				back to Moscow, train to Kazan, flight back to Saint P. Home, cottage,
+				sleeping in a cold tent with bugs, hostels and hotels.
+				<br />
+				<br />
+				📝 Note to self: never repeat such a packed schedule and always book
+				hotels in advance. and definitely not on my own dime if dont want to go.
+				that's the golden rule.
+				<br />
+				<br />
+				really enjoyed the festival, met a lot of cool people. had laptop detox
+				for 4 days!!! music only started late in the evening, with lectures and
+				walks with coffee during the day. sank into a deep depression this
+				month. The sugar mommy role is definitely not for me, and I hate taking
+				100% responsibility. also felt crappy in Kazan at the nix sprint where
+				there were no other women, and guys told me I couldnt stay at their
+				house, so I had to find an overpriced hostel because all the hotels were
+				unreasonably expensive!!! btw, my place turned out to be nice and right
+				in the center, so I often walked to the park by black lake and had
+				lovely girl roommates. so glad im heading home to saint p soon.
+			</>
+		),
+		images: [
+			"https://images.omrshn.dev/photo_2024-09-13%2011.40.58.jpeg",
+			"https://images.omrshn.dev/photo_2024-09-13%2011.40.53.jpeg",
+			"https://images.omrshn.dev/photo_2024-09-13%2011.41.01.jpeg",
+		],
 	},
-	september: {
+	septemxber: {
 		title: "september - ? ",
 		content: "in progress",
 		images: [],

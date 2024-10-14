@@ -94,8 +94,20 @@ export const monthData = {
 			"https://images.omrshn.dev/photo_2024-09-13%2011.41.01.jpeg",
 		],
 	},
-	septemxber: {
-		title: "september - ? ",
+	september: {
+		title: "september - saint p / istanbul ",
+		content:
+			"september was spent among exhibitions and gathering documents for visa application, followed by a long wait for the result. watched ballet at the Mariinsky theatre for the first time in a long while! weather is surprisingly warm for Russia, making one think more seriously about global warming. also visited an exhibition of a family friend at the Nabokov museum, then went to the hermitage and the russian Museum. its a bit sad that i wont see all of this again soon because at the end of the month I finally received confirmation for my visa, and now im heading to Spain to process my residency permit, YAAAY! i received an offer for a jewelry website for 8k pounds and hope to complete it by the end of november because besides this i have two more big projects. i'm very happy with how life is turning out. a year ago this was a goal that i thought would take at least two or three years of endless work. nikita worries that i'll get bored of europe like i did with istanbul or tbilisi, but i really doubt that. i only recently realized that the year will end soon and i'll have to refactor my diary. also, i have so many favorite spots that i simply don't have time and i'm too lazy to start filling in this part of the site. but i'll definitely do it soon",
+		images: [
+			"https://images.omrshn.dev/photo_2024-10-14%2017.36.18.jpeg",
+			"https://images.omrshn.dev/photo_2024-10-14%2017.36.14.jpeg",
+			"https://images.omrshn.dev/photo_2024-10-14%2017.36.11.jpeg",
+			"https://images.omrshn.dev/photo_2024-10-14%2017.36.17.jpeg",
+		],
+	},
+
+	october: {
+		title: "october - santander / biarritz / paris ",
 		content: "in progress",
 		images: [],
 	},
